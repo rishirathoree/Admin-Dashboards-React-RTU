@@ -1,5 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import {
+  SignOut,
+  House,
+  Chats,
+  Storefront,
+  ChartLine,
+  Suitcase,
+  Bed,
+  Money,
+  File,
+  Coins,
+  Receipt,
+  Wallet,
+  ChartLineUp,
+  ChartPie,
+  Check,
+  ThumbsDown,
+  ThumbsUp,
+  PresentationChart,
+  Vault,
+  Bank,
+  Tag,
+  UsersThree,
+  Strategy,
+} from "phosphor-react";
 
 const Sidebar = () => {
   const sidebars = [
@@ -10,20 +35,20 @@ const Sidebar = () => {
         {
           name: "Home",
           link: "/",
-          inActiveIcon: "bxs-home",
-          ActiveIcon: "bx-home",
+          inActiveIcon: House,
+          ActiveIcon: House,
         },
         {
           name: "message",
           link: "/messages",
-          inActiveIcon: "bxs-home",
-          ActiveIcon: "bx-chat",
+          inActiveIcon: Chats,
+          ActiveIcon: Chats,
         },
         {
           name: "analytics",
           link: "/analytics",
-          inActiveIcon: "bxs-home",
-          ActiveIcon: "bx-chart",
+          inActiveIcon: ChartLine,
+          ActiveIcon: ChartLine,
         },
       ],
     },
@@ -40,12 +65,12 @@ const Sidebar = () => {
           subMenus: [
             {
               title: "Reservations",
-              icon: "bx-briefcase",
+              icon: Suitcase,
               link: "/booking/reservations",
             },
             {
               title: "Check-ins",
-              icon: "bx-calendar-check",
+              icon: Bed,
               link: "/booking/checkins",
             },
           ],
@@ -65,17 +90,17 @@ const Sidebar = () => {
           subMenus: [
             {
               title: "Invoices",
-              icon: "bx-briefcase",
+              icon: Receipt,
               link: "/transactions/invoices",
             },
             {
               title: "Payments",
-              icon: "bx-dollar",
+              icon: Coins,
               link: "/transactions/payments",
             },
             {
               title: "Expenses",
-              icon: "bx-receipt",
+              icon: Wallet,
               link: "/transactions/expenses",
             },
           ],
@@ -88,17 +113,17 @@ const Sidebar = () => {
           subMenus: [
             {
               title: "Financial Reports",
-              icon: "bx-bar-chart",
+              icon:PresentationChart,
               link: "/reports/financial",
             },
             {
               title: "Profit and Loss",
-              icon: "bx-line-chart",
+              icon: ChartLineUp,
               link: "/reports/profit-loss",
             },
             {
               title: "Balance Sheet",
-              icon: "bx-pie-chart",
+              icon: ChartPie,
               link: "/reports/balance-sheet",
             },
           ],
@@ -111,17 +136,12 @@ const Sidebar = () => {
           subMenus: [
             {
               title: "Manage Accounts",
-              icon: "bxs-bank",
+              icon: Vault,
               link: "/accounts/manage",
             },
             {
-              title: "Chart of Accounts",
-              icon: "bx-list-ul",
-              link: "/accounts/chart",
-            },
-            {
               title: "Bank Accounts",
-              icon: "bx-building",
+              icon: Bank,
               link: "/accounts/bank",
             },
           ],
@@ -136,28 +156,28 @@ const Sidebar = () => {
         {
           name: "Review Summary",
           link: "/overview/review-summary",
-          inActiveIcon: "bx-star",
-          ActiveIcon: "bx-star",
+          inActiveIcon: Receipt,
+          ActiveIcon: Receipt,
         },
         {
           name: "Reviews",
           link: "/overview/reviews",
-          inActiveIcon: "bxs-message-square-detail",
-          ActiveIcon: "bx-message-square-detail",
+          inActiveIcon: Check,
+          ActiveIcon: Check,
           subMenus: [
             {
               title: "All Reviews",
-              icon: "bx-list-ul",
+              icon: Tag,
               link: "/overview/reviews/all",
             },
             {
               title: "Positive Reviews",
-              icon: "bx-like",
+              icon: ThumbsUp,
               link: "/overview/reviews/positive",
             },
             {
               title: "Negative Reviews",
-              icon: "bx-dislike",
+              icon: ThumbsDown,
               link: "/overview/reviews/negative",
             },
           ],
@@ -175,12 +195,12 @@ const Sidebar = () => {
             },
             {
               title: "Occupancy Rate",
-              icon: "bx-calendar",
+              icon: Strategy,
               link: "/overview/metrics/occupancy",
             },
             {
               title: "Customer Satisfaction",
-              icon: "bx-smile",
+              icon: UsersThree,
               link: "/overview/metrics/satisfaction",
             },
           ],
@@ -221,9 +241,11 @@ const Sidebar = () => {
 
   return (
     <aside className="w-[300px] h-full overflow-hidden overflow-y-auto scroll custom-scroll">
+     
       <span className="flex gap-2 px-6 py-4 items-center">
+        <Storefront size={30} weight="duotone" className="text-red-500" />
         <h1 className="uppercase font-black leading-none tracking-tighter text-2xl text-black/50 dark:text-white">
-          ORECERY
+          Ferotel
         </h1>
       </span>
 
@@ -258,7 +280,7 @@ const Sidebar = () => {
 `}
                 >
                   <span className="flex items-center gap-2">
-                    <i className={`bx ${menus.ActiveIcon}`}></i>
+                    <menus.ActiveIcon size={20} weight="light" />
                     <p
                       className={`first-letter:uppercase font-medium leading-none tracking-tighter  text-[12px] dark:text-white`}
                     >
@@ -276,9 +298,9 @@ const Sidebar = () => {
                   )}
                 </div>
                 <div
-                  className={`overflow-hidden ${
+                  className={`overflow-hidden  ${
                     activeDropdown === `${blockIdx}-${menuIdx}`
-                      ? "max-h-[400px] visible opacity-100 duration-1000"
+                      ? "max-h-[400px] visible opacity-100 duration-1000 "
                       : "duration-200 max-h-0 invisible opacity-0"
                   }`}
                 >
@@ -294,7 +316,7 @@ const Sidebar = () => {
                      }
                      `}
                         >
-                          <i className={`bx ${submenus.icon}`}></i>
+                          <submenus.icon weight={'thin'} size={20} />
                           <p className=" tracking-normal text-[10px] font-medium">
                             {submenus.title}
                           </p>
@@ -307,6 +329,7 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+
     </aside>
   );
 };
