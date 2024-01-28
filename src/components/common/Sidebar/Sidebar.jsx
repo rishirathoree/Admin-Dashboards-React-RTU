@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   SignOut,
   House,
+  Gear,
   Chats,
   Storefront,
   ChartLine,
@@ -53,159 +54,167 @@ const Sidebar = () => {
       ],
     },
 
-    {
-      block: "Management",
-      icon: "",
-      menus: [
-        {
-          name: "Booking",
-          link: "/",
-          inActiveIcon: "bxs-hotel",
-          ActiveIcon: "bx-book",
-          subMenus: [
-            {
-              title: "Reservations",
-              icon: Suitcase,
-              link: "/booking/reservations",
-            },
-            {
-              title: "Check-ins",
-              icon: Bed,
-              link: "/booking/checkins",
-            },
-          ],
-        },
-      ],
-    },
 
     {
-      block: "Financials",
+      block: "Check-Ins / Reservations",
       icon: "",
       menus: [
-        {
-          name: "Transactions",
-          link: "/transactions",
-          inActiveIcon: "bxs-rupees",
-          ActiveIcon: "bx-rupee",
-          subMenus: [
-            {
-              title: "Invoices",
-              icon: Receipt,
-              link: "/transactions/invoices",
-            },
-            {
-              title: "Payments",
-              icon: Coins,
-              link: "/transactions/payments",
-            },
-            {
-              title: "Expenses",
-              icon: Wallet,
-              link: "/transactions/expenses",
-            },
-          ],
-        },
-        {
-          name: "Reports",
-          link: "/reports",
-          inActiveIcon: "bxs-report",
-          ActiveIcon: "bxs-report",
-          subMenus: [
-            {
-              title: "Financial Reports",
-              icon:PresentationChart,
-              link: "/reports/financial",
-            },
-            {
-              title: "Profit and Loss",
-              icon: ChartLineUp,
-              link: "/reports/profit-loss",
-            },
-            {
-              title: "Balance Sheet",
-              icon: ChartPie,
-              link: "/reports/balance-sheet",
-            },
-          ],
-        },
-        {
-          name: "Accounts",
-          link: "/accounts",
-          inActiveIcon: "bxs-wallet",
-          ActiveIcon: "bx-wallet",
-          subMenus: [
-            {
-              title: "Manage Accounts",
-              icon: Vault,
-              link: "/accounts/manage",
-            },
-            {
-              title: "Bank Accounts",
-              icon: Bank,
-              link: "/accounts/bank",
-            },
-          ],
-        },
-      ],
+    {
+      name: "Reservations",
+      inActiveIcon: Suitcase,
+      ActiveIcon: Suitcase,
+      link: "/booking/reservations",
+    },
+    {
+      name: "Check-ins",
+      inActiveIcon: Bed,
+      ActiveIcon: Bed,
+      link: "/booking/checkins",
+    },
+    ],
     },
 
+    // {
+    //   block: "Financials",
+    //   icon: "",
+    //   menus: [
+    //     {
+    //       name: "Transactions",
+    //       link: "/transactions",
+    //       inActiveIcon: "bxs-rupees",
+    //       ActiveIcon: "bx-rupee",
+    //       subMenus: [
+    //         {
+    //           title: "Invoices",
+    //           icon: Receipt,
+    //           link: "/transactions/invoices",
+    //         },
+    //         {
+    //           title: "Payments",
+    //           icon: Coins,
+    //           link: "/transactions/payments",
+    //         },
+    //         {
+    //           title: "Expenses",
+    //           icon: Wallet,
+    //           link: "/transactions/expenses",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       name: "Reports",
+    //       link: "/reports",
+    //       inActiveIcon: "bxs-report",
+    //       ActiveIcon: "bxs-report",
+    //       subMenus: [
+    //         {
+    //           title: "Financial Reports",
+    //           icon:PresentationChart,
+    //           link: "/reports/financial",
+    //         },
+    //         {
+    //           title: "Profit and Loss",
+    //           icon: ChartLineUp,
+    //           link: "/reports/profit-loss",
+    //         },
+    //         {
+    //           title: "Balance Sheet",
+    //           icon: ChartPie,
+    //           link: "/reports/balance-sheet",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       name: "Accounts",
+    //       link: "/accounts",
+    //       inActiveIcon: "bxs-wallet",
+    //       ActiveIcon: "bx-wallet",
+    //       subMenus: [
+    //         {
+    //           title: "Manage Accounts",
+    //           icon: Vault,
+    //           link: "/accounts/manage",
+    //         },
+    //         {
+    //           title: "Bank Accounts",
+    //           icon: Bank,
+    //           link: "/accounts/bank",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+
+    // {
+    //   block: "Overview",
+    //   icon: "",
+    //   menus: [
+    //     {
+    //       name: "Review Summary",
+    //       link: "/overview/review-summary",
+    //       inActiveIcon: Receipt,
+    //       ActiveIcon: Receipt,
+    //     },
+    //     {
+    //       name: "Reviews",
+    //       link: "/overview/reviews",
+    //       inActiveIcon: Check,
+    //       ActiveIcon: Check,
+    //       subMenus: [
+    //         {
+    //           title: "All Reviews",
+    //           icon: Tag,
+    //           link: "/overview/reviews/all",
+    //         },
+    //         {
+    //           title: "Positive Reviews",
+    //           icon: ThumbsUp,
+    //           link: "/overview/reviews/positive",
+    //         },
+    //         {
+    //           title: "Negative Reviews",
+    //           icon: ThumbsDown,
+    //           link: "/overview/reviews/negative",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       name: "Performance Metrics",
+    //       link: "/overview/performance-metrics",
+    //       inActiveIcon: "bxs-chart",
+    //       ActiveIcon: "bx-chart",
+    //       subMenus: [
+    //         {
+    //           title: "Revenue",
+    //           icon: "bx-dollar",
+    //           link: "/overview/metrics/revenue",
+    //         },
+    //         {
+    //           title: "Occupancy Rate",
+    //           icon: Strategy,
+    //           link: "/overview/metrics/occupancy",
+    //         },
+    //         {
+    //           title: "Customer Satisfaction",
+    //           icon: UsersThree,
+    //           link: "/overview/metrics/satisfaction",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+
     {
-      block: "Overview",
+      block: "Maintenance",
       icon: "",
       menus: [
         {
-          name: "Review Summary",
-          link: "/overview/review-summary",
-          inActiveIcon: Receipt,
-          ActiveIcon: Receipt,
-        },
-        {
-          name: "Reviews",
-          link: "/overview/reviews",
-          inActiveIcon: Check,
-          ActiveIcon: Check,
-          subMenus: [
-            {
-              title: "All Reviews",
-              icon: Tag,
-              link: "/overview/reviews/all",
-            },
-            {
-              title: "Positive Reviews",
-              icon: ThumbsUp,
-              link: "/overview/reviews/positive",
-            },
-            {
-              title: "Negative Reviews",
-              icon: ThumbsDown,
-              link: "/overview/reviews/negative",
-            },
-          ],
-        },
-        {
-          name: "Performance Metrics",
-          link: "/overview/performance-metrics",
-          inActiveIcon: "bxs-chart",
-          ActiveIcon: "bx-chart",
-          subMenus: [
-            {
-              title: "Revenue",
-              icon: "bx-dollar",
-              link: "/overview/metrics/revenue",
-            },
-            {
-              title: "Occupancy Rate",
-              icon: Strategy,
-              link: "/overview/metrics/occupancy",
-            },
-            {
-              title: "Customer Satisfaction",
-              icon: UsersThree,
-              link: "/overview/metrics/satisfaction",
-            },
-          ],
-        },
-      ],
+                name: "Staffs",
+                link: "/maintenance/staffs",
+                inActiveIcon: UsersThree,
+                ActiveIcon: UsersThree,
+        }
+    ],
     },
   ];
 
@@ -240,15 +249,10 @@ const Sidebar = () => {
   }, [location.pathname]);
 
   return (
-    <aside className="w-[300px] h-full overflow-hidden overflow-y-auto scroll custom-scroll">
-     
-      <span className="flex gap-2 px-6 py-4 items-center">
-        <Storefront size={30} weight="duotone" className="text-red-500" />
-        <h1 className="uppercase font-black leading-none tracking-tighter text-2xl text-black/50 dark:text-white">
-          Ferotel
-        </h1>
-      </span>
+    <aside className="w-[280px] bg-gray-200/20 h-full overflow-hidden overflow-y-auto flex flex-col justify-between scroll custom-scroll">
 
+      <div className="space-y-4">
+        <p className="px-6 py-2 pt-4 font-black text-2xl tracking-tighter capitalize text-gray-500">square.</p>
       <ul>
         {sidebars.map((blocks, blockIdx) => (
           <li key={blockIdx} className="">
@@ -316,7 +320,8 @@ const Sidebar = () => {
                      }
                      `}
                         >
-                          <submenus.icon weight={'thin'} size={20} />
+                          <submenus.icon 
+                          weight={'thin'} size={20} />
                           <p className=" tracking-normal text-[10px] font-medium">
                             {submenus.title}
                           </p>
@@ -328,6 +333,21 @@ const Sidebar = () => {
             ))}
           </li>
         ))}
+      </ul>
+      </div>
+
+      
+
+      <ul className="
+      ">
+        <li onClick={()=>{setActiveDropDown('setting')}} className={`px-6 py-4 flex items-center gap-2 ${activeDropdown === 'setting' ? 'bg-blue-500 text-white' : ''}`}>
+          <Gear size={20} />
+        <p className="tracking-normal text-[10px] font-medium">Setting</p>
+        </li>
+        <li className="px-6 py-4 flex items-center gap-2">
+          <SignOut size={20} />
+        <p className="tracking-normal text-[10px] font-medium">Logout</p>
+        </li>
       </ul>
 
     </aside>
