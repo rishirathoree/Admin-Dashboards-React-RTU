@@ -8,7 +8,7 @@ const Notifications = () => {
 
   useEffect(() => {
     // Create the socket connection when the component mounts
-    const socketInstance = io('http://localhost:3001');
+    const socketInstance = io('http://192.168.79.175:3001');
     setSocket(socketInstance);
 
     // Clean up the socket connection when the component unmounts
