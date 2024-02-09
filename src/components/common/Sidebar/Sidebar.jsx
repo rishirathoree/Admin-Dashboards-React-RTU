@@ -48,12 +48,6 @@ const Sidebar = () => {
           ActiveIcon: Chats,
         },
         {
-          name: "analytics",
-          link: "/analytics",
-          inActiveIcon: ChartLine,
-          ActiveIcon: ChartLine,
-        },
-        {
           name: "Calendar",
           link: "/calendar",
           inActiveIcon: Calendar,
