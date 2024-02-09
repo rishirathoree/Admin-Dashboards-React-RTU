@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Bell, HouseSimple } from 'phosphor-react';
+import { BellSimpleRinging, HouseSimple } from 'phosphor-react';
 import { io } from 'socket.io-client';
 import { Badge, Button } from 'keep-react';
 
@@ -49,7 +49,7 @@ const Notifications = () => {
     <div className='block'>
       <div className='relative'>
         <button ref={imageRef} onClick={() => setShow((prevShow) => !prevShow)} className=''>
-          <Bell className='text-slate-700' size={20} weight={!show ? 'bold' : 'duotone'} />
+          <BellSimpleRinging className='text-slate-700' size={20} weight={!show ? 'bold' : 'duotone'} />
           <span className='text-[10px] font-semibold text-red-500 absolute -top-2 -right-1'>
             {notificationMessageDetail.length > 0 && notificationMessageDetail.filter(item=>item.read === 0).length}
           </span>
