@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   SignOut,
+  Calendar,
   House,
   Gear,
   Chats,
@@ -26,8 +27,9 @@ import {
   UsersThree,
   Strategy,
 } from "phosphor-react";
-
+import cycLogo from '../../../assets/images/cyclogo.png'
 const Sidebar = () => {
+  
   const sidebars = [
     {
       block: "Dashboard",
@@ -50,6 +52,12 @@ const Sidebar = () => {
           link: "/analytics",
           inActiveIcon: ChartLine,
           ActiveIcon: ChartLine,
+        },
+        {
+          name: "Calendar",
+          link: "/calendar",
+          inActiveIcon: Calendar,
+          ActiveIcon: Calendar,
         },
       ],
     },
@@ -92,6 +100,11 @@ const Sidebar = () => {
           title: "Create Rooms",
           icon: Receipt,
           link: "/rooms/create",
+        },
+        {
+          title: "All Rooms",
+          icon: Receipt,
+          link: "/rooms/list",
         },
 ]
     },
@@ -273,10 +286,11 @@ const Sidebar = () => {
   }, [location.pathname]);
 
   return (
-    <aside className="w-[280px] bg-gray-200/20 h-full overflow-hidden overflow-y-auto flex flex-col justify-between scroll custom-scroll">
+    <aside className="w-[280px] z-50 bg-gray-200/20 h-full overflow-hidden overflow-y-auto flex flex-col justify-between scroll custom-scroll">
 
       <div className="space-y-4">
-        <p className="px-6 py-2 pt-4 font-black text-2xl tracking-tighter capitalize text-gray-500">square.</p>
+        {/* <img src={cycLogo} className="scale-75 drop-shadow-xl" alt="" /> */}
+        <p className="px-6 py-2 pt-4 font-black text-2xl tracking-tighter capitalize text-gray-500">Square.</p>
       <ul>
         {sidebars.map((blocks, blockIdx) => (
           <li key={blockIdx} className="">

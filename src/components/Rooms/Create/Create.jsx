@@ -26,11 +26,14 @@ const Create = () => {
         "Terrace",
         "Free Parking"
       ]
-      
+      const options = [
+        { value: 'standard', label: 'Standard' },
+        { value: 'deluxe', label: 'Deluxe' },
+        { value: 'suite', label: 'Suite' }
+      ];
   return (
     <div className='py-2 pb-4 w-full'>
       <div className='h-full bg-white p-6 space-y-8'>
-
       
       {/* selects */}
       <div className='grid grid-cols-4 gap-8'>
@@ -38,7 +41,7 @@ const Create = () => {
         return (
             <label htmlFor="roomType" className='block space-y-1'>
         <p className='font-medium text-[10px]'>{item}</p>
-        <Select className='text-[12px]' id='roomType' />
+        <Select className='text-[12px]' id='roomType' options={options} />
       </label>
         )
       })}
