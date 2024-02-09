@@ -13,7 +13,7 @@ import Calendar from "./components/Calendar/Calendar";
         <div className="right-container-page h-full w-[calc(100%-280px)] rounded-l-md bg-white max-h-full min-h-screen overflow-hidden overflow-y-auto custom-scroll">
           <Navbar />
           <BookingAlertPop />
-          {/* <NotificationsPop /> */}
+          <NotificationsPop />
           <Breadcrumbs />
         <Routes>
           <Route path="/" element={<HomePage/>} />

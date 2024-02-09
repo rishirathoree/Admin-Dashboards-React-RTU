@@ -11,7 +11,8 @@ const Pagination = () => {
         return(
           <span
           onClick={()=>{setPaginations(idx + 1)}}
-          className={`w-8 h-8 text-[12px] border-r-[1px] last:border-r-0 cursor-pointer font-medium bg-white flex items-center justify-center ${idx + 1 === pagination ? 'bg-gray-900 text-gray-100' : ''}`}>{idx + 1}</span>
+          className={`w-8 h-8 text-[12px] border-r-[1px] last:border-r-0 cursor-pointer font-medium bg-white flex items-center justify-center 
+          ${idx + 1 === pagination ? 'bg-gray-900 text-gray-100' : ''}`}>{idx + 1}</span>
         )
       })}
       </div>

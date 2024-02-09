@@ -295,8 +295,8 @@ ${!menus.subMenus && location.pathname.endsWith(menus.link)
           <div className="">
           <span className="p-8 block space-y-4">
           <Warning size={20} />
-          <p className="font-bold text-sm">Are you sure, you want to logout?</p>
-          <p className="font-medium text-gray-500 text-sm ">Are you sure you want to log out? Logging out will end your current session and you will need to sign in again to access your account.</p>
+          <p className="font-bold text-lg text-gray-600">Are you sure, you want to logout?</p>
+          <p className="font-medium text-gray-500 text-md ">Logging out will end your current session and you will need to sign in again to access your account.</p>
           </span>
           <span className="space-x-4 block px-6 py-4 border-t-[1px]">
           <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5">Logout</button>
