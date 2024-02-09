@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TurnBreadModalOpen } from "../../../Store/Slices/AppSlice";
 import { Button, Modal, TextInput } from "keep-react";
-import { UsersThree, UsersFour, CloudArrowUp } from "phosphor-react";
+import { UsersThree,HouseSimple, UsersFour, CloudArrowUp } from "phosphor-react";
 import Select from "react-select";
 
 const CreateCheckin = () => {
@@ -33,8 +33,8 @@ const CreateCheckin = () => {
         type={"primary"}
         className="bg-blue-500 text-white gap-2 flex items-center"
       >
-        <UsersThree size={20} className="text-white" />
-        <p className="font-medium text-white pl-2">Create Check In</p>
+        <HouseSimple size={20} className="text-white" />
+        <p className="font-medium text-white pl-2">Create Rooms</p>
       </Button>
 
       <div className={`fixed top-0 right-0 h-screen w-full bg-black/50 duration-200 z-50 flex items-center justify-center ${BreadOpenState ? 'visible opacity-100' : 'invisible opacity-0'}`}>

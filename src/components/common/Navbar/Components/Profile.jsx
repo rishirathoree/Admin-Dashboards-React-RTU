@@ -23,9 +23,10 @@ const Profile = () => {
   return (
     <div>
       <div className='relative'>
-        <button ref={imageRef} onClick={()=>{setShow(p=>!p)}} className='w-8 h-8 overflow-hidden rounded-md ring-1 ring-black/5 bg-blue-500 text-[12px] text-white font-semibold capitalize tracking-tighter'>
-            <img src={profile} className='object-cover' alt="" />
-        </button>
+        <div ref={imageRef} onClick={()=>{setShow(p=>!p)}} className='w-max p-1 cursor-pointer items-center flex min overflow-hidden rounded-md ring-1 ring-black/5 text-[12px] text-white font-semibold capitalize tracking-tighter'>
+            <img src={profile} className='object-cover w-8 h-8' alt="" />
+            <p className='font-semibold select-none text-black text-[10px]'>Rishi Rathore</p>
+        </div>
         <div ref={boxRef} className={`w-40 top-12 right-0 bg-white ring-1 ring-black/5 shadow-xl rounded-lg shadow-black/5 py-2 absolute h-min duration-200
         ${show ? 'visible opacity-100 scale100 translate-y-0' : '-translate-y-4 scal-75 invisible opacity-0'}`}>
         <ul>

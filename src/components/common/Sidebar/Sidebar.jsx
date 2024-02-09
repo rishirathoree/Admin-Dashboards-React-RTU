@@ -56,20 +56,44 @@ const Sidebar = () => {
 
 
     {
-      block: "Check-Ins / Reservations",
+      block: "Reservations",
       icon: "",
       menus: [
     {
-      name: "Reservations",
+      name: "Booking  ",
       inActiveIcon: Suitcase,
       ActiveIcon: Suitcase,
       link: "/booking/reservations",
+      subMenus: [
+                {
+                  title: "Booked Rooms",
+                  icon: Receipt,
+                  link: "/bookings/booked",
+                },
+                {
+                  title: "Available Rooms",
+                  icon: Receipt,
+                  link: "/bookings/available",
+                },
+                {
+                  title: "Blocked Rooms ",
+                  icon: Receipt,
+                  link: "/bookings/blocked",
+                },
+      ]
     },
     {
-      name: "Check-ins",
+      name: "Rooms",
       inActiveIcon: Bed,
       ActiveIcon: Bed,
       link: "/booking/checkins",
+      subMenus: [
+        {
+          title: "Create Rooms",
+          icon: Receipt,
+          link: "/rooms/create",
+        },
+]
     },
     ],
     },

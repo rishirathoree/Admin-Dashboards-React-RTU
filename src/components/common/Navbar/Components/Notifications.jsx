@@ -46,13 +46,12 @@ const Notifications = () => {
   };
 
   return (
-    <div>
+    <div className='block'>
       <div className='relative'>
         <button ref={imageRef} onClick={() => setShow((prevShow) => !prevShow)} className=''>
           <Bell className='text-slate-700' size={20} weight={!show ? 'bold' : 'duotone'} />
           <span className='text-[10px] font-semibold text-red-500 absolute -top-2 -right-1'>
             {notificationMessageDetail.length > 0 && notificationMessageDetail.filter(item=>item.read === 0).length}
-              
           </span>
         </button>
         <div
@@ -63,26 +62,25 @@ const Notifications = () => {
         >
             <div className='bg-white flex items-center justify-between p-4 border-b-[1px] border-black/10 sticky top-0 left-0'>
                 <p className='font-semibold text-[10px]'>Notifications</p>
-                <button 
+                {/* <button 
                 onClick={()=>{
                     const filterArr = notificationMessageDetail.slice(0,10).map((item,idx)=>{
                         return {...item,read:1}
                     })
                     setNotificationMessageDetail(filterArr)
                 }}
-                className='text-white font-medium px-6 py-2 rounded-sm bg-orange-400 focus:bg-orange-400/50 text-[8px]'>Mark all as read</button>
+                className='text-white font-medium px-6 py-2 rounded-sm bg-orange-400 focus:bg-orange-400/50 text-[8px]'>Mark all as read</button> */}
             </div>
           <ul>
-            {notificationMessageDetail.reverse().map((item, idx) => (
+          {Array.from({length :10}).map((item, idx) => (
               <li
                 key={idx}
-                onClick={() => readedNotification(idx)}
-                className={`cursor-pointerduration-500 cursor-pointer text-[12px] flex items-center justify-between gap-4 font-light p-2`}
+                className={`cursor-pointer hover:bg-gray-200 items-center duration-200 cursor-pointer text-[12px] flex items-center justify-between gap-4 font-light p-2`}
               >
-                <span className=' space-y-2'>
+                <span className='flex items-center gap-2 space-y-2'>
                 <HouseSimple size={20} className='' weight={show ? 'bold' : 'duotone'} />
                 <p className='font-semibold text-[10px]'>
-                  {item.customerName}, {item.msg}
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, ipsam.
                 </p>
                 </span>
               </li>
@@ -96,7 +94,20 @@ const Notifications = () => {
 
 export default Notifications;
 
-
+// {notificationMessageDetail.reverse().map((item, idx) => (
+//   <li
+//     key={idx}
+//     onClick={() => readedNotification(idx)}
+//     className={`cursor-pointerduration-500 cursor-pointer text-[12px] flex items-center justify-between gap-4 font-light p-2`}
+//   >
+//     <span className=' space-y-2'>
+//     <HouseSimple size={20} className='' weight={show ? 'bold' : 'duotone'} />
+//     <p className='font-semibold text-[10px]'>
+//       {item.customerName}, {item.msg}
+//     </p>
+//     </span>
+//   </li>
+// ))}
 
 // import express from 'express';
 // import http from 'http';

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Toasters from '../common/Toasters/Toasters'
 import { AreaChart, Button, Statistic } from 'keep-react'
 import {Buildings,CurrencyDollar,Receipt} from 'phosphor-react'
+import axios from 'axios'
 
 const Home = () => {
-
+  
   return (
     <div className='w-full py-2 h-full'>
       <div className='grid grid-cols-4 gap-4 p-4 h-full bg-white'>
