@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { CaretRight } from "phosphor-react";
-import CreateCheckin from "../../Checkin/Subcomps/CreateCheckin";
 
 const Breadcrumbs = () => {
   
@@ -10,7 +9,7 @@ const Breadcrumbs = () => {
   const paths = location.pathname.split("/").filter((item) => item !== "");
 
   const buttonsCtaBreadcrumbs  = [
-    {path:'/booking/checkins',comps:CreateCheckin}
+    // {path:'/booking/checkins',comps:CreateCheckin}
   ]
   
   return (
@@ -35,9 +34,7 @@ const Breadcrumbs = () => {
       })}
      </div>
 
-     {buttonsCtaBreadcrumbs.map((item,index)=>{
-      return location.pathname.endsWith(item.path) && <item.comps />
-     })}
+     {/* add breadcrub buttons right side */}
      
     </div>
   );

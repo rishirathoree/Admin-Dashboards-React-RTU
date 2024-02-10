@@ -3,35 +3,27 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import profile from '../../../assets/images/profile.avif'
 import {
   SignOut,
+  User,
   Calendar,
   X,
   Warning,
   House,
   Gear,
+  Envelope,
+  Key,
+  UserFocus,
   BellSimpleRinging,
   Chats,
   Notebook,
   LockSimpleOpen,
   Suitcase,
   Bed,
-  Money,
-  File,
-  Coins,
   Receipt,
-  Wallet,
-  ChartLineUp,
-  ChartPie,
-  Check,
-  ThumbsDown,
   ThumbsUp,
-  PresentationChart,
-  Vault,
-  Bank,
-  Tag,
-  UsersThree,
-  Strategy,
 } from "phosphor-react";
+
 import cycLogo from '../../../assets/images/cyclogo.png'
+
 const Sidebar = () => {
 
   const [logoutShow, setLogoutShow] = useState(false)
@@ -47,12 +39,6 @@ const Sidebar = () => {
           inActiveIcon: House,
           ActiveIcon: House,
         },
-        // {
-        //   name: "message",
-        //   link: "/messages",
-        //   inActiveIcon: Chats,
-        //   ActiveIcon: Chats,
-        // },
         {
           name: "Calendar",
           link: "/calendar",
@@ -72,19 +58,19 @@ const Sidebar = () => {
           link: "/booking/reservations",
           subMenus: [
             {
-              title: "Booked Rooms",
+              title: "All Bookings",
               icon: Receipt,
-              link: "/bookings/booked",
+              link: "/bookings/booking",
             },
             {
-              title: "Available Rooms",
+              title: "Create Bookings",
               icon: Receipt,
-              link: "/bookings/available",
+              link: "/bookings/create",
             },
             {
-              title: "Blocked Rooms ",
+              title: "Online Bookings",
               icon: Receipt,
-              link: "/bookings/blocked",
+              link: "/bookings/online",
             },
           ]
         },
@@ -147,6 +133,40 @@ const Sidebar = () => {
         },
       ],
     },
+    {
+      block: "Account",
+      icon: "",
+      menus: [
+        {
+          name: "Hotel Account Settings",
+          inActiveIcon: User,
+          ActiveIcon: User,
+          link: "/booking/checkins",
+          subMenus: [
+            {
+              title: "General",
+              icon: User,
+              link: "/account/general",
+            },
+            {
+              title: "Email",
+              icon: Envelope,
+              link: "/account/termsandcondition",
+            },
+            {
+              title: "Security",
+              icon: Key,
+              link: "/account/chats",
+            },
+            {
+              title: "Account Activity",
+              icon: UserFocus,
+              link: "/account/privacypolicy",
+            },
+          ]
+        },
+      ],
+    },
   ];
 
   const navigate = useNavigate();
@@ -185,7 +205,7 @@ const Sidebar = () => {
 
         <div className="space-y-4">
           {/* <img src={cycLogo} className="scale-75 drop-shadow-xl" alt="" /> */}
-          <p className="px-6 py-2 pt-4 font-black text-2xl tracking-tighter capitalize text-gray-500">Square.</p>
+          <p className="px-6 py-2 pt-4 font-black text-4xl -tracking-[5px] capitalize text-red-500">OYO.</p>
           <ul>
             {sidebars.map((blocks, blockIdx) => (
               <li key={blockIdx} className="">
@@ -210,7 +230,7 @@ const Sidebar = () => {
                       }}
                       className={`px-6 py-4 w-full cursor-pointer flex items-center justify-between gap-2
 ${!menus.subMenus && location.pathname.endsWith(menus.link)
-                          ? "bg-blue-500 text-white"
+                          ? "bg-red-400 text-white"
                           : "hover:bg-white text-gray-900 "
                         }
 `}
@@ -244,8 +264,8 @@ ${!menus.subMenus && location.pathname.endsWith(menus.link)
                             <span
                               className={`w-full flex items-center cursor-pointer gap-2 pl-12  py-4
                ${location.pathname.endsWith(submenus.link)
-                                  ? "bg-blue-500 text-white"
-                                  : "hover:bg-blue-500 hover:text-white text-gray-800"
+                                  ? "bg-red-400 text-white"
+                                  : "hover:bg-red-400 hover:text-white text-gray-800"
                                 }
                `}
                             >
@@ -299,8 +319,8 @@ ${!menus.subMenus && location.pathname.endsWith(menus.link)
           <p className="font-medium text-gray-500 text-md ">Logging out will end your current session and you will need to sign in again to access your account.</p>
           </span>
           <span className="space-x-4 block px-6 py-4 border-t-[1px]">
-          <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5">Logout</button>
-          <button type="button" onClick={()=>{setLogoutShow(false)}} class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5">Cancel</button>
+          <button type="button" className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5">Logout</button>
+          <button type="button" onClick={()=>{setLogoutShow(false)}} className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5">Cancel</button>
           </span>
           </div>
         </div>

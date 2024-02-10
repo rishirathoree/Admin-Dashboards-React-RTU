@@ -3,7 +3,7 @@ import React from 'react'
 const Login = () => {
   return (
     <div className='flex items-center justify-center w-full bg-gray-100/40 h-screen flex-col space-y-2'>
-        <h1 class="uppercase font-extrabold leading-none tracking-tighter text-gray-600 text-2xl dark:text-white">Grocers</h1>
+        <h1 className="uppercase font-extrabold leading-none tracking-tighter text-gray-600 text-2xl dark:text-white">Grocers</h1>
       <div className='w-1/3 bg-gray-50 shadow-sm shadow-black/5 rounded-lg h-min p-2'>
         <div className='bg-white h-min w-full space-y-4 text-center flex items-center flex-col p-4'>
             
@@ -19,16 +19,16 @@ const Login = () => {
                 <input type="text" className='w-full text-[12px] outline-none outline-blue-500/20 focus:outline-blue-500/40 outline-2 duration-500 p-2 rounded-sm' name="" id="email" placeholder='Enter your email' />
             </label>
 
-            <button type="button" className="text-white w-full bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-[3px] focus:ring-blue-300 uppercase font-semibold rounded-md text-sm p-3 shadow-inner text-center ">Login</button>
+            <button type="button" className="text-white w-full bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-[3px] focus:ring-blue-300 uppercase font-semibold rounded-md text-sm p-3 shadow-inner text-center ">Login</button>
             </span>
 
             <span className='w-full block space-y-2'>
-            <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-md border border-gray-200 focus:z-10 focus:ring-2 focus:ring-gray-200 w-full flex space-x-2 items-end justify-center">
+            <button type="button" className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-md border border-gray-200 focus:z-10 focus:ring-2 focus:ring-gray-200 w-full flex space-x-2 items-end justify-center">
                 {/* <i className='bx bxl-apple'></i> */}
                 <p className='font-semibold text-[12px] capitalize'>Continue with apple</p>
             </button>
 
-            <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-md border border-gray-200 focus:z-10 focus:ring-2 focus:ring-gray-200 w-full flex space-x-2 items-end justify-center">
+            <button type="button" className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-md border border-gray-200 focus:z-10 focus:ring-2 focus:ring-gray-200 w-full flex space-x-2 items-end justify-center">
                 {/* <i className='bx bxl-apple'></i> */}
                 <p className='font-semibold text-[12px] capitalize'>Continue with google</p>
             </button>

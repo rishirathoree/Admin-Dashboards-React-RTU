@@ -1,0 +1,1 @@
+export {default as GeneralSettingForm} from './GeneralForm'

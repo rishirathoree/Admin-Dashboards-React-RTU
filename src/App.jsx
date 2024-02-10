@@ -1,5 +1,5 @@
   import React from "react";
-  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, ReservationsPage, Breadcrumbs, CheckinPage, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms } from "./components/Layout";
+  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, Breadcrumbs, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms, BookingsAllPage, CreateBookingsPage, BookingOnlinePage, GeneralSettingPage } from "./components/Layout";
   import { Route, Routes, useRoutes } from "react-router-dom";
   import 'boxicons/css/boxicons.min.css'
 import Calendar from "./components/Calendar/Calendar";
@@ -17,10 +17,11 @@ import Calendar from "./components/Calendar/Calendar";
           <Breadcrumbs />
         <Routes>
           <Route path="/" element={<HomePage/>} />
-          <Route path="/bookings/booked" element={<ReservationsPage/>} />
-          <Route path="/bookings/available" element={<ReservationsPage/>} />
-          <Route path="/bookings/blocked" element={<ReservationsPage/>} />
           <Route path="/rooms/create" element={<CreateRooms/>} />
+          <Route path="/bookings/booking" element={<BookingsAllPage/>} />
+          <Route path="/bookings/create" element={<CreateBookingsPage/>} />
+          <Route path="/bookings/online" element={<BookingOnlinePage/>} />
+          <Route path="/account/general" element={<GeneralSettingPage/>} />
           <Route path="/rooms/list" element={<AllRooms/>} />
           <Route path="/calendar" element={<Calendar/>} />
         </Routes>

@@ -7,34 +7,34 @@ const BookingAlertNotifications = () => {
   const [showNotification, setShowNotification] = useState(true);
   const [bookingAlert, setBookingAlert] = useState(null);
 
-  useEffect(() => {
-    // Create the socket connection when the component mounts
-    const socketInstance = io('http://192.168.79.175:3001');
+  // useEffect(() => {
+  //   // Create the socket connection when the component mounts
+  //   const socketInstance = io('http://192.168.79.175:3001');
 
-    // Listen for the 'newOrder' event
-    socketInstance.on('newOrder', (orderData) => {
-      setBookingAlert(orderData);
-      playNotificationSound();
-    });
+  //   // Listen for the 'newOrder' event
+  //   socketInstance.on('newOrder', (orderData) => {
+  //     setBookingAlert(orderData);
+  //     playNotificationSound();
+  //   });
 
-    // Clean up the socket connection when the component unmounts
-    return () => {
-      socketInstance.disconnect();
-    };
-  }, []);
+  //   // Clean up the socket connection when the component unmounts
+  //   return () => {
+  //     socketInstance.disconnect();
+  //   };
+  // }, []);
 
   const onDismiss = () => {
     setBookingAlert(null);
   };
 
-  const playNotificationSound = () => {
-    const audio = new Audio(NotificationsSound);
-    audio.play();
-  };
+  // const playNotificationSound = () => {
+  //   const audio = new Audio(NotificationsSound);
+  //   audio.play();
+  // };
 
-  useEffect(() => {
-    setShowNotification((prev) => !prev);
-  }, [bookingAlert]);
+  // useEffect(() => {
+  //   setShowNotification((prev) => !prev);
+  // }, [bookingAlert]);
 
   return (
     <div>
