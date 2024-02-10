@@ -156,7 +156,7 @@ const Sidebar = () => {
             {
               title: "Security",
               icon: Key,
-              link: "/account/chats",
+              link: "/account/security",
             },
             {
               title: "Account Activity",

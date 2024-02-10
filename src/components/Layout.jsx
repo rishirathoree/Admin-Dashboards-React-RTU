@@ -16,3 +16,5 @@ export {default as BookingsAllPage} from '../components/Bookings/AllBookings/Boo
 export {default as CreateBookingsPage} from '../components/Bookings/CreateBookings/CreateBookings'
 export {default as BookingOnlinePage} from '../components/Bookings/OnlineBookings/OnlineBooking'
 export {default as GeneralSettingPage} from '../components/Settings/General/General'
+export {default as SecuritySettingPage} from '../components/Settings/Security/Security'
+export {default as NotificationsSettingPage} from '../components/Settings/Notifications/Notifications'

@@ -1,0 +1,1 @@
+export {default as RoomListTable} from './AllRoomsTable'

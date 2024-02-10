@@ -1,5 +1,5 @@
   import React from "react";
-  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, Breadcrumbs, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms, BookingsAllPage, CreateBookingsPage, BookingOnlinePage, GeneralSettingPage } from "./components/Layout";
+  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, Breadcrumbs, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms, BookingsAllPage, CreateBookingsPage, BookingOnlinePage, GeneralSettingPage, SecuritySettingPage, NotificationsSettingPage } from "./components/Layout";
   import { Route, Routes, useRoutes } from "react-router-dom";
   import 'boxicons/css/boxicons.min.css'
 import Calendar from "./components/Calendar/Calendar";
@@ -22,6 +22,8 @@ import Calendar from "./components/Calendar/Calendar";
           <Route path="/bookings/create" element={<CreateBookingsPage/>} />
           <Route path="/bookings/online" element={<BookingOnlinePage/>} />
           <Route path="/account/general" element={<GeneralSettingPage/>} />
+          <Route path="/account/security" element={<SecuritySettingPage/>} />
+          <Route path="/settings/notifications" element={<NotificationsSettingPage/>} />
           <Route path="/rooms/list" element={<AllRooms/>} />
           <Route path="/calendar" element={<Calendar/>} />
         </Routes>
