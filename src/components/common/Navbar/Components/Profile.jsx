@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
-import profile from '../../../../assets/images/dp.jpg'
+import profile from '../../../../assets/images/profile.avif'
 import {User,SignOut,Gear,Storefront} from 'phosphor-react'
+import SignoutModal from './SignoutModal'
 const Profile = () => {
+
     const [show,setShow] = useState(false)
-    useEffect(()=>{},[])
+
     const boxRef = useRef()
+
     const imageRef = useRef()
 
     useEffect(() => {
@@ -47,10 +50,7 @@ const Profile = () => {
             <p className='font-medium text-[12px]'>Store Management</p>
           </li>
 
-          <li className='cursor-pointer hover:bg-gray-100/60 duration-200 text-[12px] rounded-md flex items-center justify-center ring-1 ring-black/5 gap-2 font-light p-2'>
-            <SignOut size={13}/>
-            <p className='font-medium text-[12px]'>Sign out of all accounts</p>
-          </li>
+          <SignoutModal />
           
         </ul>
         </div>

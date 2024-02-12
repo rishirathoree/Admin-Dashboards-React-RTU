@@ -111,26 +111,26 @@ const Sidebar = () => {
               icon: BellSimpleRinging,
               link: "/settings/notifications",
             },
-            {
-              title: "Terms & Conditions",
-              icon: Notebook,
-              link: "/settings/termsandcondition",
-            },
-            {
-              title: "Chats Support",
-              icon: Chats,
-              link: "/settings/chats",
-            },
-            {
-              title: "Privacy Policy",
-              icon: LockSimpleOpen,
-              link: "/settings/privacypolicy",
-            },
-            {
-              title: "Feedbacks",
-              icon: ThumbsUp,
-              link: "/settings/feedbacks",
-            },
+            // {
+            //   title: "Terms & Conditions",
+            //   icon: Notebook,
+            //   link: "/settings/termsandcondition",
+            // },
+            // {
+            //   title: "Chats Support",
+            //   icon: Chats,
+            //   link: "/settings/chats",
+            // },
+            // {
+            //   title: "Privacy Policy",
+            //   icon: LockSimpleOpen,
+            //   link: "/settings/privacypolicy",
+            // },
+            // {
+            //   title: "Feedbacks",
+            //   icon: ThumbsUp,
+            //   link: "/settings/feedbacks",
+            // },
           ]
         },
       ],
@@ -150,21 +150,21 @@ const Sidebar = () => {
               icon: User,
               link: "/account/general",
             },
-            {
-              title: "Email",
-              icon: Envelope,
-              link: "/account/termsandcondition",
-            },
+            // {
+            //   title: "Email",
+            //   icon: Envelope,
+            //   link: "/account/termsandcondition",
+            // },
             {
               title: "Security",
               icon: Key,
               link: "/account/security",
             },
-            {
-              title: "Account Activity",
-              icon: UserFocus,
-              link: "/account/privacypolicy",
-            },
+            // {
+            //   title: "Account Activity",
+            //   icon: UserFocus,
+            //   link: "/account/privacypolicy",
+            // },
           ]
         },
       ],
@@ -294,40 +294,21 @@ ${!menus.subMenus && location.pathname.endsWith(menus.link)
 ">
 
           <li className="m-2 bg-white p-2 rounded-lg ring-black/5 ring-[1px] flex items-center justify-between ">
-            <span className="flex items-center gap-1">
-              <img src={profile} className="w-12 h-12" alt="" />
+            <span className="flex items-center gap-1 rounded-lg">
+              <img src={profile} className="object-cover rounded-md w-8 h-8" alt="" />
               <span>
                 <p className="font-semibold text-[10px]">Rishi Rathore</p>
                 <p className="font-semibold text-gray-400 text-[10px]">Hotelier : 212</p>
               </span>
             </span>
             <div className="relative">
-              <SignOut onClick={() => { setLogoutShow(p => !p) }} className="scale-x-[-1]" size={20} />
+              <UserFocus className="scale-x-[-1]" size={20} />
 
             </div>
           </li>
         </ul>
 
       </aside>
-      <div className={`w-full h-full bg-black/50 z-[100] fixed top-0 left-0 flex items-center justify-center ${logoutShow ? 'visibile opacity-100' : 'invisible opacity-0'}`}>
-        <div className="w-1/2 h-min bg-white rounded-xl">
-          <span className=" border-b-[1px] flex items-center justify-between p-6">
-          <p className="font-semibold text-[12px]">Logout Warning</p>
-          <X onClick={()=>{setLogoutShow(false)}} size={20} />
-          </span>
-          <div className="">
-          <span className="p-8 block space-y-4">
-          <Warning size={20} />
-          <p className="font-bold text-lg text-gray-600">Are you sure, you want to logout?</p>
-          <p className="font-medium text-gray-500 text-md ">Logging out will end your current session and you will need to sign in again to access your account.</p>
-          </span>
-          <span className="space-x-4 block px-6 py-4 border-t-[1px]">
-          <button type="button" className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5">Logout</button>
-          <button type="button" onClick={()=>{setLogoutShow(false)}} className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5">Cancel</button>
-          </span>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

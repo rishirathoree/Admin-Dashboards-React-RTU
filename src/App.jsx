@@ -6,17 +6,13 @@ import Calendar from "./components/Calendar/Calendar";
 import { useDispatch, useSelector } from "react-redux";
   const App = () => {
     
-  const isSidebarExpanded = useSelector(state=>state.App.isSidebarOpen)
-
-  console.log(isSidebarExpanded)
-  const dispatch = useDispatch()
     const routes = useRoutes([
       { path: "/login", element: <LoginPage /> },
       // {path:"*", element: <UnavailablePage/>},
       {path:'/*',element:(
         <div className="parent-container flex bg-white h-screen">
           <SidebarMain />
-        <div className={`right-container-page h-full fixed top-0 w-[calc(100%-280px)] right-0 rounded-l-md bg-white max-h-full min-h-screen overflow-hidden overflow-y-auto custom-scroll duration-500 animate-keep-bounce
+        <div className={`right-container-page h-full fixed top-0 w-[calc(100%-280px)] right-0 rounded-l-md bg-white max-h-full min-h-screen overflow-hidden overflow-y-auto custom-scroll duration-500
         `}>
           <Navbar />
           <BookingAlertPop />

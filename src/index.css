@@ -14,6 +14,7 @@
 
 .custom-scroll::-webkit-scrollbar {
     width: 6px; /* WebKit */
+    height: 6px; /* WebKit */
   }
   
   .custom-scroll::-webkit-scrollbar-thumb {
@@ -23,4 +24,8 @@
   
   .custom-scroll::-webkit-scrollbar-track {
     background-color: #f0f0f0; /* WebKit track color */
+  }
+
+  .grid-cols-30{
+    grid-template-columns: repeat(31,1fr);
   }
