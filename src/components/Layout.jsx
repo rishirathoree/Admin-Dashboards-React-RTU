@@ -1,5 +1,6 @@
 export {default as LoginPage} from './Authentication/Login/Login'
 export {default as HomePage} from './Home/Home'
+export {default as WalletPage} from './Wallet/Wallet'
 export {default as UnavailablePage} from './PageUnavailable/PageUnavailable'
 export {default as SidebarMain} from './common/Sidebar/Sidebar'
 export {default as Navbar} from './common/Navbar/Navbar'
@@ -18,3 +19,4 @@ export {default as BookingOnlinePage} from '../components/Bookings/OnlineBooking
 export {default as GeneralSettingPage} from '../components/Settings/General/General'
 export {default as SecuritySettingPage} from '../components/Settings/Security/Security'
 export {default as NotificationsSettingPage} from '../components/Settings/Notifications/Notifications'
+export {default as TariffPlansPage} from '../components/Settings/Plans/Plans'

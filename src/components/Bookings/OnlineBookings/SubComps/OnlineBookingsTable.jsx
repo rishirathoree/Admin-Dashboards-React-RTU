@@ -65,7 +65,7 @@ return (
       <tbody className="bg-white">
 
        {reservations.map((reservation, index) => (
-           <tr key={index} className="border-y-[1px] cursor-pointer hover:bg-gray-100/40 last:border-y-0 border-slate-100">
+           <tr key={index} className="border-y-[1px] cursor-pointer hover:bg-gray-100/40 last:border-y-0 border-slate-200">
             <td className="font-medium py-2 min-w-min text-center max-w-max p-4 text-[12px] ">{index + 1}</td>
             <td className="font-medium py-2 min-w-min text-center max-w-max p-4 text-[12px] ">{reservation.fullName}</td>
             <td className="font-medium py-2 min-w-min text-center max-w-max p-4 text-[12px] ">{parseInt(reservation.money - reservation.paidAmount)}</td>
@@ -73,7 +73,7 @@ return (
             <td className="font-medium py-2 min-w-min text-center max-w-max p-4 text-[12px] ">{reservation.money}</td>
             <td className="font-medium py-2 w-full text-center p-4 text-[12px] flex items-center justify-center ">
               <div className="flex items-center gap-2">
-              <span className="p-2 rounded-lg text-black/60 bg-green-500/50"><Check size={20} /></span>
+              <span className="p-2 rounded-lg text-black/60 bg-red-500/50"><Check size={20} /></span>
               <span className="p-2 rounded-lg text-black/60 bg-red-500/50"><X size={20} /></span>
             <button onClick={()=>{setDeleteReservationId(index)}}><Trash size={20}  className="" /></button>
               </div>

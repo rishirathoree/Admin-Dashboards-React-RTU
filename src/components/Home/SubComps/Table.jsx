@@ -65,7 +65,7 @@ const Table = () => {
         <tbody className="bg-white">
 
          {reservations.map((reservation, index) => (
-             <tr key={index} className="border-y-[1px] hover:bg-gray-100/40 last:border-y-0 border-slate-100">
+             <tr key={index} className="border-y-[1px] hover:bg-gray-100/40 last:border-y-0 border-slate-200">
               <td className="font-medium py-2 min-w-min text-center max-w-max p-4 text-[12px] ">{index + 1}</td>
               <td className="font-medium py-2 min-w-min text-center p-4 text-[12px]   flex items-center gap-2">
                 {reservation.fullName}

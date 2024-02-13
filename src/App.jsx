@@ -1,5 +1,5 @@
   import React from "react";
-  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, Breadcrumbs, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms, BookingsAllPage, CreateBookingsPage, BookingOnlinePage, GeneralSettingPage, SecuritySettingPage, NotificationsSettingPage } from "./components/Layout";
+  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, Breadcrumbs, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms, BookingsAllPage, CreateBookingsPage, BookingOnlinePage, GeneralSettingPage, SecuritySettingPage, NotificationsSettingPage, TariffPlansPage, WalletPage } from "./components/Layout";
   import { Route, Routes, useRoutes } from "react-router-dom";
   import 'boxicons/css/boxicons.min.css'
 import Calendar from "./components/Calendar/Calendar";
@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
           <Breadcrumbs />
         <Routes>
           <Route path="/" element={<HomePage/>} />
+          <Route path="/wallet" element={<WalletPage/>} />
           <Route path="/rooms/create" element={<CreateRooms/>} />
           <Route path="/bookings/booking" element={<BookingsAllPage/>} />
           <Route path="/bookings/create" element={<CreateBookingsPage/>} />
@@ -27,6 +28,7 @@ import { useDispatch, useSelector } from "react-redux";
           <Route path="/account/general" element={<GeneralSettingPage/>} />
           <Route path="/account/security" element={<SecuritySettingPage/>} />
           <Route path="/settings/notifications" element={<NotificationsSettingPage/>} />
+          <Route path="/settings/plans" element={<TariffPlansPage/>} />
           <Route path="/rooms/list" element={<AllRooms/>} />
           <Route path="/calendar" element={<Calendar/>} />
         </Routes>

@@ -1,46 +1,48 @@
 import React, { useState } from 'react';
-
+import { ReserverDetailModalsPop } from './Index';
 const CalenderViewer = () => {
-  
+
+  const [selectedCustomer,setSelectedCustomer] = useState(null)
+
   const calendarData = [
     {
       id: 1,
-      fromDate: new Date(2024, 1, 1), 
+      fromDate: new Date(2024, 1, 1),
       toDate: new Date(2024, 1, 5),
       customerName: "John Doe",
       roomNumber: "101"
     },
     {
       id: 3,
-      fromDate: new Date(2024, 1, 10), 
+      fromDate: new Date(2024, 1, 10),
       toDate: new Date(2024, 1, 12),
       customerName: "John Doe",
       roomNumber: "101"
     },
     {
       id: 34,
-      fromDate: new Date(2024, 1, 1), 
+      fromDate: new Date(2024, 1, 1),
       toDate: new Date(2024, 1, 5),
       customerName: "John Doe",
       roomNumber: "102"
     },
     {
       id: 23,
-      fromDate: new Date(2024, 1, 12), 
+      fromDate: new Date(2024, 1, 12),
       toDate: new Date(2024, 1, 14),
       customerName: "John Doe",
       roomNumber: "102"
     },
     {
       id: 34,
-      fromDate: new Date(2024, 1, 1), 
+      fromDate: new Date(2024, 1, 1),
       toDate: new Date(2024, 1, 5),
       customerName: "John Doe",
       roomNumber: "103"
     },
     {
       id: 23,
-      fromDate: new Date(2024, 1, 12), 
+      fromDate: new Date(2024, 1, 12),
       toDate: new Date(2024, 1, 14),
       customerName: "John Doe",
       roomNumber: "103"
@@ -80,56 +82,60 @@ const CalenderViewer = () => {
   const dateArray = getDatesBetween(dateRange.dateFrom, dateRange.dateTo);
 
   return (
-    <div className='flex gap-4 w-full overflow-hidden overflow-x-auto'>
+    <>
+      <div className='flex gap-4 w-full overflow-hidden overflow-x-auto'>
 
-      <div className='mt-[68px] grid grid-cols-1 gap-4'>
-        {roomsArray.map(room => room[0].roomNumber).map((item, idx) => {
-          
-          return (
-            <span className='inline-block p-4 border rounded-lg'><p className='font-medium text-[12px]'>{item}</p></span>
-          )
-        })}
-      </div>
-      
-      <div className='space-y-4 w-full'>
-        {/* Dates Top */}
-        <div style={{ gridTemplateColumns: `repeat(${dateArray.length}, 1fr)` }} className='grid gap-4'>
-          {dateArray.map((item, idx) => {
+        <div className='mt-[68px] grid grid-cols-1 gap-4'>
+          {roomsArray.map(room => room[0].roomNumber).map((item, idx) => {
+
             return (
-              <span className='inline-block p-4 border rounded-lg'><p className='font-medium text-[12px]'>{item.getDate()}</p></span>
+              <span className='inline-block p-4 border rounded-lg'><p className='font-medium text-[12px]'>{item}</p></span>
             )
           })}
         </div>
 
-        {/* Boxes */}
-        <div className='grid gap-4'>
-          {roomsArray.map((calendar, idx) => {
-            return (
-              <div key={idx} style={{ gridTemplateColumns: `repeat(${dateArray.length}, 1fr)` }} className='grid gap-4'>
-                {calendar.map((item, idx) => {
-                  const startDate = item.fromDate.getDate();
-                  const endDate = item.toDate.getDate();
-                  return (
-                    <span
-                      key={idx}
-                      style={{
-                        gridColumnStart: startDate,
-                        gridColumnEnd: endDate + 1,
-                      }}
-                      className={`p-4 bg-red-500 text-white rounded-lg`}
-                    >
-                      <p className='font-medium text-[12px]'>{item.customerName}</p>
-                    </span>
-                  );
-                })}
-              </div>
-            );
-          })}
+        <div className='space-y-4 w-full'>
+          {/* Dates Top */}
+          <div style={{ gridTemplateColumns: `repeat(${dateArray.length}, 1fr)` }} className='grid gap-4'>
+            {dateArray.map((item, idx) => {
+              return (
+                <span className='inline-block p-4 border rounded-lg'><p className='font-medium text-[12px]'>{item.getDate()}</p></span>
+              )
+            })}
+          </div>
 
+          {/* Boxes */}
+          <div className='grid gap-4'>
+            {roomsArray.map((calendar, idx) => {
+              return (
+                <div key={idx} style={{ gridTemplateColumns: `repeat(${dateArray.length}, 1fr)` }} className='grid gap-4'>
+                  {calendar.map((item, idx) => {
+                    const startDate = item.fromDate.getDate();
+                    const endDate = item.toDate.getDate();
+                    return (
+                      <span
+                      onClick={()=>{setSelectedCustomer(item)}}
+                        key={idx}
+                        style={{
+                          gridColumnStart: startDate,
+                          gridColumnEnd: endDate + 1,
+                        }}
+                        className={`p-4 bg-red-500 cursor-pointer text-white rounded-lg`}
+                      >
+                        <p className='font-medium text-[12px]'>{item.customerName}</p>
+                      </span>
+                    );
+                  })}
+                </div>
+              );
+            })}
+
+          </div>
         </div>
-      </div>
 
-    </div>
+      </div>
+      {selectedCustomer && <ReserverDetailModalsPop onCancel={()=>{setSelectedCustomer(null)}} />  }
+    </>
   )
 }
 

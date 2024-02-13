@@ -3,10 +3,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import profile from '../../../assets/images/profile.avif'
 import {
   SignOut,
+  Ticket,
   User,
   Calendar,
-  X,
-  Warning,
+  Wallet,
   House,
   Gear,
   Envelope,
@@ -46,6 +46,12 @@ const Sidebar = () => {
           link: "/calendar",
           inActiveIcon: Calendar,
           ActiveIcon: Calendar,
+        },
+        {
+          name: "Wallet",
+          link: "/wallet",
+          inActiveIcon: Wallet,
+          ActiveIcon: Wallet,
         },
       ],
     },
@@ -110,6 +116,11 @@ const Sidebar = () => {
               title: "Notifications",
               icon: BellSimpleRinging,
               link: "/settings/notifications",
+            },
+            {
+              title: "Plans",
+              icon: Ticket,
+              link: "/settings/plans",
             },
             // {
             //   title: "Terms & Conditions",
@@ -203,12 +214,12 @@ const Sidebar = () => {
 
   return (
     <>
-      <aside className="w-[280px] fixed left-0 top-0 z-50 bg-gray-200/20 h-full overflow-hidden overflow-y-auto flex flex-col justify-between scroll custom-scroll">
+      <aside className="w-[280px] fixed left-0 top-0 bg-gray-200/20 h-full overflow-hidden overflow-y-auto flex flex-col justify-between scroll custom-scroll">
 
         <div className="space-y-4 ">
           {/* <img src={cycLogo} className="scale-75 drop-shadow-xl" alt="" /> */}
           {/* <ArrowsHorizontal size={15} className="absolute z-50 -right-2 p-2 top-8 rounded-md bg-gray-100/70 w-min h-min"/> */}
-          <p className="px-6 py-2 pt-4 font-black text-4xl -tracking-[2px] capitalize text-red-500">DESC.</p>
+          <Link to={'/'}><p className="px-6 py-2 pt-4 font-black text-xl -tracking-[1px] capitalize text-red-500">Hotelier Desk</p></Link>
           <ul>
             {sidebars.map((blocks, blockIdx) => (
               <li key={blockIdx} className="">

@@ -60,7 +60,7 @@ const NotificationTable = () => {
         <tbody className="bg-white">
 
          {reservations.map((item, index) => (
-             <tr key={index} className="border-y-[1px] cursor-pointer hover:bg-gray-100/40 last:border-y-0 border-slate-100">
+             <tr key={index} className="border-y-[1px] cursor-pointer hover:bg-gray-100/40 last:border-y-0 border-slate-200">
               <td className="font-medium py-2 min-w-min text-center max-w-max p-4 text-[12px] ">{index + 1}</td>
               <td className="font-medium py-2 min-w-min text-left max-w-max p-4 text-[12px] ">{item.randomMailSubjects.split(':')[0]}</td>
               <td className="font-medium py-2 min-w-min text-left max-w-max p-4 text-[12px] ">{item.randomEmailMessages.split(' [')[0]}</td>

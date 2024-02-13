@@ -1,11 +1,13 @@
 import React from 'react'
-import { DateCalenderBookingViewer } from './SubComps/Index'
-
+import ReserverDetailModal from './SubComps/ReserverDetailModal'
+import CalenderViewer from './SubComps/CalenderViewer'
 const Calendar = () => {
   return (
+    <>
     <div className='p-4'>
-        <DateCalenderBookingViewer />
+    <CalenderViewer />
     </div>
+    </>
   )
 }
 

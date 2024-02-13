@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const GeneralForm = () => {
     const [updates, setUpdates] = useState(false);
     const [credentials, setCredentials] = useState({
@@ -16,11 +15,17 @@ const GeneralForm = () => {
             [key]: e.target.value,
         });
     };
-    console.log(updates)
 
     return (
         <>
         <div className='space-y-4'>
+        
+        <span className='space-y-4'>
+            <p className='font-medium text-sm'>Hotel Images</p>
+            <div className='w-80 h-60 rounded-lg bg-gray-200'></div>
+        </span>
+
+        {/* {updates && <span className='w-1/2 block'><SingleUploader /></span> } */}
             
         <div className=" grid grid-cols-2 gap-4">
             {Object.entries(credentials).map(([key, value]) => (

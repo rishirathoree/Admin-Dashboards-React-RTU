@@ -10,16 +10,16 @@ const Login = () => {
             <p className='text-gray-800 text-md font-bold uppercase'>SignUp</p>
             
             <span className='border-y-[1px] py-4 border-dashed'>
-            <p className='text-gray-800 text-[10px] font-semibold uppercase'>By login, I agree the Grocers <span className='text-blue-500'>privacy policy</span> and <span className='text-blue-500'>terms and conditions</span>.</p>
+            <p className='text-gray-800 text-[10px] font-semibold uppercase'>By login, I agree the Grocers <span className='text-red-500'>privacy policy</span> and <span className='text-red-500'>terms and conditions</span>.</p>
             </span>
 
             <span className='w-full block space-y-4 border-b-[1px] pb-4 border-dashed'>
             <label htmlFor="email" className='text-left w-full space-y-2'>
                 <p className='text-gray-400 text-[10px]'>Email</p>
-                <input type="text" className='w-full text-[12px] outline-none outline-blue-500/20 focus:outline-blue-500/40 outline-2 duration-500 p-2 rounded-sm' name="" id="email" placeholder='Enter your email' />
+                <input type="text" className='w-full text-[12px] outline-none outline-red-500/20 focus:outline-red-500/40 outline-2 duration-500 p-2 rounded-sm' name="" id="email" placeholder='Enter your email' />
             </label>
 
-            <button type="button" className="text-white w-full bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-[3px] focus:ring-blue-300 uppercase font-semibold rounded-md text-sm p-3 shadow-inner text-center ">Login</button>
+            <button type="button" className="text-white w-full bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-[3px] focus:ring-red-300 uppercase font-semibold rounded-md text-sm p-3 shadow-inner text-center ">Login</button>
             </span>
 
             <span className='w-full block space-y-2'>

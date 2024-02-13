@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 const ImageUploader = () => {
     const [handleImages, setHandleImages] = useState([]);
-
-    // Function to handle file upload
     const handleFileUpload = (e) => {
         const files = Array.from(e.target.files);
         const imageFiles = files.filter(file => file.type.startsWith('image/'));

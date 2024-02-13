@@ -29,3 +29,7 @@
   .grid-cols-30{
     grid-template-columns: repeat(31,1fr);
   }
+
+  .z-300{
+    z-index: 300;
+  }
