@@ -73,8 +73,8 @@ return (
             <td className="font-medium py-2 min-w-min text-center max-w-max p-4 text-[12px] ">{reservation.money}</td>
             <td className="font-medium py-2 w-full text-center p-4 text-[12px] flex items-center justify-center ">
               <div className="flex items-center gap-2">
-              <span className="p-2 rounded-lg text-black/60 bg-red-500/50"><Check size={20} /></span>
-              <span className="p-2 rounded-lg text-black/60 bg-red-500/50"><X size={20} /></span>
+              <span className="p-2 rounded-lg text-black/60 bg-red-400/50"><Check size={20} /></span>
+              <span className="p-2 rounded-lg text-black/60 bg-red-400/50"><X size={20} /></span>
             <button onClick={()=>{setDeleteReservationId(index)}}><Trash size={20}  className="" /></button>
               </div>
             </td>

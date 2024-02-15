@@ -57,7 +57,6 @@ const CalenderViewer = () => {
 
   const roomsArray = calendarData.reduce((acc, curr) => {
     const existingRoomIndex = acc.findIndex(room => room[0].roomNumber === curr.roomNumber);
-    console.log(existingRoomIndex)
     if (existingRoomIndex !== -1) {
       acc[existingRoomIndex].push(curr);
     } else {
@@ -83,7 +82,7 @@ const CalenderViewer = () => {
 
   return (
     <>
-      <div className='flex gap-4 w-full overflow-hidden overflow-x-auto'>
+      <div className='flex gap-4 p-4 w-full overflow-hidden overflow-x-auto'>
 
         <div className='mt-[68px] grid grid-cols-1 gap-4'>
           {roomsArray.map(room => room[0].roomNumber).map((item, idx) => {
@@ -120,7 +119,7 @@ const CalenderViewer = () => {
                           gridColumnStart: startDate,
                           gridColumnEnd: endDate + 1,
                         }}
-                        className={`p-4 bg-red-500 cursor-pointer text-white rounded-lg`}
+                        className={`p-4 bg-red-400 cursor-pointer text-white rounded-lg`}
                       >
                         <p className='font-medium text-[12px]'>{item.customerName}</p>
                       </span>

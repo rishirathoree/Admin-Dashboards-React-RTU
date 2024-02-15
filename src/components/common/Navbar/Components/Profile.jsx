@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import profile from '../../../../assets/images/profile.avif'
 import {User,SignOut,Gear,Storefront} from 'phosphor-react'
 import SignoutModal from './SignoutModal'
+import { Link } from 'react-router-dom'
 const Profile = () => {
 
     const [show,setShow] = useState(false)
@@ -35,10 +36,12 @@ const Profile = () => {
         ${show ? 'visible opacity-100 scale100 translate-y-0' : '-translate-y-4 scal-75 invisible opacity-0'}`}>
         <ul className='p-1'>
           
+          <Link onClick={()=>{setShow(false)}} to={'/account/general'}>
           <li className='cursor-pointer hover:bg-gray-100/60 duration-200 text-[12px] flex items-center gap-2 font-light p-2'>
             <User size={13}/>
             <p className='font-medium text-[12px]'>My Profile</p>
           </li>
+          </Link>
 
           <li className='cursor-pointer hover:bg-gray-100/60 duration-200 text-[12px] flex items-center gap-2 font-light p-2'>
             <Gear size={13}/>
@@ -47,7 +50,7 @@ const Profile = () => {
 
           <li className='cursor-pointer mb-2 border-b-[1px] border-gray-50 hover:bg-gray-100/60 duration-200 text-[12px] flex items-center gap-2 font-light p-2'>
             <Storefront size={13}/>
-            <p className='font-medium text-[12px]'>Store Management</p>
+            <p className='font-medium text-[12px]'>Hotel Management</p>
           </li>
 
           <SignoutModal />

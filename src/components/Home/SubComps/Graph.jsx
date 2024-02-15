@@ -18,7 +18,7 @@ const Graph = () => {
       <div className='flex gap-4 justify-end items-end'>
         {weeklySalesData.map((item, i) => {
           const isLoss = item.sales < 0;
-          const barColor = isLoss ? 'bg-violet-400' : 'bg-violet-200';
+          const barColor = isLoss ? 'bg-red-400' : 'bg-red-200';
           return (
             <div key={i} style={{height:`${(Math.abs(item.sales) /8) }px`}} className={`hover:scale-105 duration-500 ring-black/5 shadow-md rounded-lg relative w-full ${barColor}`}>
              <p className='font-semibold text-[10px] text-gray-200  -top-4 absolute left-8'>{item.sales}</p>
