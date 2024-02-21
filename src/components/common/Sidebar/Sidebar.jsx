@@ -218,9 +218,7 @@ const Sidebar = () => {
       <aside className="w-[280px] fixed left-0 top-0 bg-gray-200/20 h-full overflow-hidden overflow-y-auto flex flex-col justify-between scroll custom-scroll">
 
         <div className="space-y-4">
-          <Link to={'/'}><button className="block px-4 py-2 focus:animate-keep-bounce"><img src={logo} className=" w-20 h-20" alt="" /></button></Link>
-          {/* <ArrowsHorizontal size={15} className="absolute z-50 -right-2 p-2 top-8 rounded-md bg-gray-100/70 w-min h-min"/> */}
-          {/* <Link to={'/'}><p className="px-6 py-2 pt-4 font-black text-xl -tracking-[1px] capitalize text-red-500">Hotelier Desk</p></Link> */}
+          <Link to={'/'}><button className="block px-4 py-2 focus:animate-keep-bounce"><img src={logo} className=" w-12 h-12" alt="" /></button></Link>
           <ul>
             {sidebars.map((blocks, blockIdx) => (
               <li key={blockIdx} className="">
