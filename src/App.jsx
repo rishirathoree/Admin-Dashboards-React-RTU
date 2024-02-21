@@ -1,5 +1,5 @@
   import React from "react";
-  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, Breadcrumbs, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms, BookingsAllPage, CreateBookingsPage, BookingOnlinePage, GeneralSettingPage, SecuritySettingPage, NotificationsSettingPage, TariffPlansPage, WalletPage } from "./components/Layout";
+  import { HomePage, LoginPage, SidebarMain,Navbar, Toaster, UnavailablePage, Breadcrumbs, NotificationsPop, BookingAlertPop, CreateRooms, AllRooms, BookingsAllPage, CreateBookingsPage, BookingOnlinePage, GeneralSettingPage, SecuritySettingPage, NotificationsSettingPage, TariffPlansPage, WalletPage, BookedRooms } from "./components/Layout";
   import { Route, Routes, useRoutes } from "react-router-dom";
   import 'boxicons/css/boxicons.min.css'
 import Calendar from "./components/Calendar/Calendar";
@@ -22,6 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
           <Route path="/" element={<HomePage/>} />
           <Route path="/wallet" element={<WalletPage/>} />
           <Route path="/rooms/create" element={<CreateRooms/>} />
+          <Route path="/rooms/booked" element={<BookedRooms/>} />
           <Route path="/bookings/booking" element={<BookingsAllPage/>} />
           <Route path="/bookings/create" element={<CreateBookingsPage/>} />
           <Route path="/bookings/online" element={<BookingOnlinePage/>} />
